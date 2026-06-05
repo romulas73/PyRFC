@@ -64,6 +64,11 @@ Asynchronous, non-blocking [SAP NetWeaver RFC SDK](https://support.sap.com/en/pr
 
 ## Requirements
 
+### Python
+
+- Python 3.10 or higher is required (Python 3.10, 3.11, 3.12, 3.13, 3.14)
+- Python 3.8 and 3.9 are no longer supported as they have reached end-of-life
+
 ### SAP NW RFC SDK 7.50 Patch Level 12
 
 - see [SAP Note 3337381: SAP NetWeaver RFC SDK 7.50 -- Patch Level 12](https://me.sap.com/notes/3337381) for a list of bug fixes and enhancements made with this patch release.
@@ -81,7 +86,7 @@ PyRFC is using source distribution (sdist) installation on Linux systems and [Cy
 
 - Build toolchain for Python requires [Microsoft C++ Build Tools](https://aka.ms/buildtools), the latest version recommended
 
-- Due to a [change introduced with Python 3.8 for Windows](https://docs.python.org/3.8/whatsnew/3.8.html#bpo-36085-whatsnew), PATH directories are no longer searched for DLL. The SAP NWRFC SDK lib path is no longer required on PATH, for Python >= 3.8.
+- Due to a [change introduced with Python 3.8 for Windows](https://docs.python.org/3.8/whatsnew/3.8.html#bpo-36085-whatsnew), PATH directories are no longer searched for DLL. The SAP NWRFC SDK lib path is not required on PATH.
 
 ### macOS
 
@@ -115,7 +120,7 @@ Alternative build from source installation:
 git clone https://github.com/SAP/PyRFC.git
 cd PyRFC
 # if you use tox
-tox -e py311 # for Python 3.11
+tox -e py313 # for Python 3.13
 # or
 python -m pip install .
 # or
