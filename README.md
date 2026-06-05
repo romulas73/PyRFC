@@ -100,34 +100,60 @@ PyRFC is using source distribution (sdist) installation on Linux systems and [Cy
 
 ## Download and installation
 
+### Install from PyPI
+
 ```shell
 pip install pyrfc
 ```
 
 On Windows and macOS platforms pre-built binary wheel is installed, without local compilation. On Linux platform the package is locally built from source distribution.
 
-Build from source distribution can be requested also on other platforms:
+### Build from source (this repository)
+
+**Prerequisites:**
+- Python 3.10 or higher
+- [SAP NW RFC SDK 7.50](#sap-nw-rfc-sdk-750-patch-level-12) installed, with `SAPNWRFC_HOME` environment variable pointing to the SDK root directory
+- [Cython](https://cython.readthedocs.io/en/latest/index.html) (required on Linux)
+- C/C++ compiler (gcc on Linux, Visual C++ Build Tools on Windows, Xcode on macOS)
+
+**Steps:**
+
+1. Clone the repository and install:
 
 ```shell
-pip install --no-binary pyrfc pyrfc
-# or
-pip install https://files.pythonhosted.org/packages/.../pyrfc-3.1.0.tar.gz
+git clone https://github.com/romulas73/PyRFC.git
+cd PyRFC
+
+# Set the SDK path (adjust to your installation)
+export SAPNWRFC_HOME=/usr/local/sap/nwrfcsdk  # Linux/macOS
+# set SAPNWRFC_HOME=C:\nwrfcsdk                # Windows
+
+# Install directly
+pip install .
+
+# Or install in editable/development mode
+pip install -e .
 ```
 
-Alternative build from source installation:
+2. Verify the installation:
 
 ```shell
-git clone https://github.com/SAP/PyRFC.git
-cd PyRFC
-# if you use tox
+python -c "from pyrfc import *; print('pyrfc installed successfully')"
+```
+
+**Alternative build methods:**
+
+```shell
+# Using tox
 tox -e py313 # for Python 3.13
-# or
-python -m pip install .
-# or
+
+# Build wheel and sdist
 python -m build --wheel --sdist --outdir dist
-# or
+
+# Build from source with Cython (Linux)
 PYRFC_BUILD_CYTHON=yes python -m build --wheel --sdist --outdir dist
 pip install --upgrade --no-index --find-links=dist pyrfc
+```
 ```
 
 Run ``python`` and type ``from pyrfc import *``. If this finishes silently, without oputput, the installation was successful.
