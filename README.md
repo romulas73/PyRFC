@@ -100,13 +100,6 @@ PyRFC is using source distribution (sdist) installation on Linux systems and [Cy
 
 ## Download and installation
 
-### Install from PyPI
-
-```shell
-pip install pyrfc
-```
-
-On Windows and macOS platforms pre-built binary wheel is installed, without local compilation. On Linux platform the package is locally built from source distribution.
 
 ### Build from source (this repository)
 
