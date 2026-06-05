@@ -267,17 +267,4 @@ Highly recommended reading about RFC communication and SAP NW RFC Library, publi
 
 - [Part III Advanced Topics](https://wiki.scn.sap.com/wiki/x/FD67Gg)
 
-## How to obtain support
 
-If you encounter an issue or have a feature request, you can create a [ticket](https://github.com/SAP/PyRFC/issues).
-
-Check out the [SAP Community](https://community.sap.com/) (search for "pyrfc") and stackoverflow (use the tag [pyrfc](https://stackoverflow.com/questions/tagged/pyrfc)), to discuss code-related problems and questions.
-
-## Contributing
-
-We appreciate contributions from the community to **PyRFC**!
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on our philosophy around extending this module.
-
-## Code of Conduct
-
-See [Code of Conduct](./CODE_OF_CONDUCT.md)
