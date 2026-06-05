@@ -10,7 +10,7 @@ license = { file = "LICENSES/Apache-2.0.txt" }
 description = "Python bindings for SAP NetWeaver RFC SDK"
 authors = [ { name = "SAP SE"}, { email = "srdjan.boskovic@sap.com" } ]
 maintainers = [ { name = "Srdjan Boskovic", email = "srdjan.boskovic@sap.com" } ]
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 keywords = ["pyrfc", "sap", "nwrfc", "sapnwrfc", "abap"]
 classifiers = [
     "Topic :: Software Development :: Build Tools",
@@ -22,11 +22,11 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Cython",
     "Programming Language :: Python",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Programming Language :: Python :: 3 :: Only"
 ]
 dependencies = []
@@ -57,7 +57,7 @@ testpaths =["tests"]
 preview = true
 respect-gitignore = true
 line-length = 88
-target-version = "py38"
+target-version = "py310"
 
 [tool.ruff.lint]
 select = [
